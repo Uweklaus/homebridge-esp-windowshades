@@ -10,11 +10,11 @@
 
   "accessories": [
     {
-      "accessory": "ESP8266WindowShades",
+      "accessory": "ESP8266Windowshades",
       "name": "Window",
       "hostname": "192.168.1.20",
-      "port": "1337",
-      "window": "1"
+      "port": "80",
+      "window": "1" 
     }
   ]
 }

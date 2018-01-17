@@ -9,6 +9,12 @@ Controlling your  window shade through Siri is be actually quite cool. I will pu
 
 For more details about ESP8266 window project check out [this repository](https://github.com/psled/esp8266-windowshades).
 
+# Improvements
+V 0.2.0
+- Using real POST request to set TargetPosition.
+- Reporting back Target Position to homekit
+- Using Window Covering icon in homekit
+
 # License
 
 ISC

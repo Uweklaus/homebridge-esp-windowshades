@@ -33,15 +33,16 @@ ESP8266Window.prototype.setTargetPosition = function (value, cb) {
 
   var self = this;
 
-  var postData = JSON.stringify({ value: value });
+  var postData = "value="+String(value);
 
   var options = {
     hostname: self._hostname,
     port: self._port,
     path: path.join(WINDOW_PATH, self._window, 'targetSetPosition'),
-    method: 'GET',
+    method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Content-Length': Buffer.byteLength(postData)
     }
   };
 
@@ -189,7 +190,7 @@ ESP8266Window.prototype.getServices = function () {
     .setCharacteristic(Characteristic.SerialNumber, "A0123456789");
   services.push(informationService);
 
-  var windowService = new Service.Window(this.name);
+  var windowService = new Service.WindowCovering(this.name);
   windowService
     .getCharacteristic(Characteristic.TargetPosition)
     .on('set', this.setTargetPosition.bind(this));

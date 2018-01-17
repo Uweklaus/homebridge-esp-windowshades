@@ -1,11 +1,13 @@
 {
   "name": "homebridge-esp-windowshades",
-  "version": "0.0.3",
+  "version": "0.2.0",
   "description": "ESP8266 windowshades plugin for Homebridge",
   "main": "",
   "keywords": [
     "homebridge-plugin",
-    "esp8266"
+    "esp8266",
+    "shades",
+    "covering"
   ],
   "repository": {
     "type": "git",
